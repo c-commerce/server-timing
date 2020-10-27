@@ -13,9 +13,6 @@ module.exports = function serverTiming (options) {
   return (req, res, next) => {
     const headers = []
     const timer = new Timer()
-    if (res.setMetric) {
-      throw new Error('res.setMetric already exists.')
-    }
 
     const startAt = process.hrtime()
 
